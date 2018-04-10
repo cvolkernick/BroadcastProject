@@ -42,6 +42,8 @@ public class CustomReceiver extends BroadcastReceiver {
                 Log.d(TAG, "onReceive: " + message);
                 Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
                 break;
+            case "myAction":
+                Toast.makeText(context, intent.getStringExtra("data"), Toast.LENGTH_SHORT).show();
         }
     }
 }
